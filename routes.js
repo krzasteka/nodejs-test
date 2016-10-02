@@ -1,10 +1,10 @@
 module.exports = function(app){
-
-	var student = require('./controllers/studentController');
+	
+	var company = require('./controllers/companyController');
 	app.get('/', function(req, res, next){
 		return res.send("WELCOME TO REST API");
 	});
 
-	app.get('/getStudent', student.getStudent);
-	app.post('/createStudent', student.createStudent);
+	app.get('/getCompanies', company.getCompanies);
+	app.post('/createCompany', company.createCompany);
 };
