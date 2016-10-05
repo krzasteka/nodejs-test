@@ -20,15 +20,15 @@ module.exports = (function workOrderSchema(){
 		data:
 			[{
 				name:{type: String},
-				value:{type: Array}
+				value:[{type: String}]
 			}],
 		notes:{type: Array},
 		remarks:{type: String}
 	};
 
-	var collectionName = 'wordkorder';
+	var collectionName = 'workorder';
 	var workOrderSchema = mongoose.Schema(schema);
 	var WorkOrder = mongoose.model(collectionName, workOrderSchema);
 
-	return Company;
+	return WorkOrder;
 })();

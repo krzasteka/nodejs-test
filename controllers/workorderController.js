@@ -1,10 +1,10 @@
-function companyController() {
-	var Company = require('../models/companySchema');
+function workorderController() {
+	var Workorder = require('../models/workorderSchema');
 	
-	// Creating New Company
-	this.createCompany = function (req, res, next) {
+	// Creating New Workorder
+	this.createWorkorder = function (req, res, next) {
 		var json = JSON.parse(req.body)
-		Company.create(json, function(err, result) {
+		Workorder.create(json, function(err, result) {
 			if (err) {
 				console.log(err);
 				return res.send({'error':err});	
@@ -16,9 +16,9 @@ function companyController() {
 	};
 
   // Return all companies
-  this.getCompanies = function (req, res, next) {
+  this.getWorkorders = function (req, res, next) {
 
-  	Company.find({}, function(err, result) {
+  	Workorder.find({}, function(err, result) {
   		if (err) {
   			console.log(err);
   			return res.send({'error':err}); 
@@ -29,10 +29,10 @@ function companyController() {
   	});
   };
 
-  // Fetching Details of Company
-  this.getCompany = function (req, res, next) {
+  // Fetching Details of Workorder
+  this.getWorkorder = function (req, res, next) {
 
-  	Company.findOne({
+  	Workorder.findOne({
 		_id: req.params.id
 	}, function(err, result) {
   		if (err) {
@@ -46,9 +46,9 @@ function companyController() {
   };
 
   //Delete 
-  this.removeCompany = function (req, res, next) {
+  this.removeWorkorder = function (req, res, next) {
 
-  	Company.remove({
+  	Workorder.remove({
 		_id: req.params.id
 	}, function(err, result) {
   		if (err) {
@@ -63,4 +63,4 @@ function companyController() {
   return this;
 };
 
-module.exports = new companyController();
+module.exports = new workorderController();
