@@ -5,6 +5,7 @@ module.exports = function(app){
 		return res.send("WELCOME TO REST API");
 	});
 
+	app.get('/getCompany/:id', company.getCompany);
 	app.get('/getCompanies', company.getCompanies);
 	app.post('/createCompany', company.createCompany);
 };

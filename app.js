@@ -7,7 +7,6 @@ var app = restify.createServer({
 app.use(restify.fullResponse());
 app.use(restify.bodyParser());
 app.use(restify.queryParser());
-app.use(restify.jsonBodyParser());
 
 app.listen(config.port, function(){
 	console.log('server listening on port number: ', config.port);
