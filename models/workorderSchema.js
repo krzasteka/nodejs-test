@@ -20,7 +20,7 @@ module.exports = (function workOrderSchema(){
 		data:
 			[{
 				name:{type: String},
-				value:[{type: String}]
+				value:[String]
 			}],
 		notes:{type: Array},
 		remarks:{type: String}

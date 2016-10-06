@@ -24,7 +24,7 @@ function workorderController() {
   			return res.send({'error':err}); 
   		}
   		else {
-  			return res.send({'Companies ':result});
+  			return res.send({'Workorders ':result});
   		}
   	});
   };
@@ -40,7 +40,7 @@ function workorderController() {
   			return res.send({'error':err}); 
   		}
   		else {
-  			return res.send({'Companies ':result});
+  			return res.send({'Workorder ':result});
   		}
   	});
   };
@@ -56,7 +56,7 @@ function workorderController() {
   			return res.send({'error':err}); 
   		}
   		else {
-  			return res.send({'Companies ':result});
+  			return res.send({'Workorder ':result});
   		}
   	});
   };  
