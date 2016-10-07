@@ -1,18 +1,14 @@
 module.exports = function(app){
 	
-	var company = require('./controllers/companyController');
-	var workorder = require('./controllers/workorderController');
+	var elotero = require('./controllers/eloteroController');
+
 	app.get('/', function(req, res, next){
-		return res.send("WELCOME TO REST API");
+		return res.send("Yo soy eloteros!");
 	});
 
-	app.post('/createCompany', company.createCompany);
-	app.get('/getCompanies', company.getCompanies);
-	app.get('/getCompany/:id', company.getCompany);
-	app.get('/removeCompany/:id', company.removeCompany);
+	app.post('/createElotero', elotero.createElotero);
+	app.get('/getEloteros', elotero.getEloteros);
+	app.get('/getElotero/:id', elotero.getElotero);
+	app.get('/removeElotero/:id', elotero.removeElotero);
 
-	app.post('/createWorkorder', workorder.createWorkorder);
-	app.get('/getWorkorders', workorder.getWorkorders);
-	app.get('/getWorkorder/:id', workorder.getWorkorder);
-	app.get('/removeWorkorder/:id', workorder.removeWorkorder);
 };

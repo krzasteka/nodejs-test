@@ -1,7 +1,7 @@
 var restify = require('restify');
 var config = require('./config');
 var app = restify.createServer({
-	name: "RESTapi"
+	name: "Elotero"
 });
 
 app.use(restify.fullResponse());

@@ -1,4 +1,4 @@
 {
-	"dbPath": "mongodb://localhost/rest-api",
+	"dbPath": "mongodb://localhost/elotero",
 	"port": 8000
 }
